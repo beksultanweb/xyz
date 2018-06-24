@@ -1,0 +1,5 @@
+Link
+
+url:string
+short:string 
+clicks:integer
