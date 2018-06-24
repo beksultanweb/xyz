@@ -2,6 +2,6 @@
 	<td></td>
 	<td><%= link.url %></td>
 	<td><%= link.created_at.strftime("%d.%m.%Y") %></td>
-	<td><%= link_to root_url + link.short, root_url + link.short, target: "_blank" %></td>
+	<td><%= link_to root_url + link.short, root_url + link.short, target: "_self" %></td>
 	<td><%= link.count %></td>
 </tr>

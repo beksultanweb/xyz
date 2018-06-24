@@ -8,7 +8,7 @@
 			<%= f.submit "Submit", class: "btn btn-info" %>
 		<% end %>
 	</div>
-
+	<%= will_paginate %>
 	<table class="table">
 		<th>
 			<td>Original URL</td>
@@ -16,9 +16,9 @@
 			<td>Shortened URL</td>
 			<td>Clicks</td>
 		</th>
-		<tbody>
+		<tbody id="tablebody">
 			<%= render @links %>
 		</tbody>
 	</table>
-
+	<%= will_paginate %>
 </div>

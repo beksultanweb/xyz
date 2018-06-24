@@ -2,6 +2,7 @@ class LinksController < ApplicationController
   
   def index
   	@links = Link.all
+  	@links = Link.paginate(page: params[:page])
   end
 
   def create
@@ -19,6 +20,7 @@ class LinksController < ApplicationController
 
   def redirect
   	l = Link.find_by_short(params[:id])
+  	
   	l.update_attribute(:count, l.count + 1)
   	redirect_to l.url
   end
